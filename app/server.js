@@ -61,7 +61,6 @@ app.get('/get-profile', function (req, res) {
     if (err) throw err;
 
     let db = client.db(databaseName);
-
     let myquery = { userid: 1 };
 
     db.collection("users").findOne(myquery, function (err, result) {
